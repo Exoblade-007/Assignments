@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Stats Section Styles */
+.stats-section {
+    background-color: #0B1B48;
+    background-image: url('images/spotlight-bg.webp');
+    background-position: right top;
+    background-repeat: no-repeat;
+    padding: 60px 0;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.stats-title {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 15px;
+    position: relative;
+    text-align: center;
+}
+
+.stats-title::after {
+    content: '';
+    background-image: url('images/spotlight-heading-bg.svg');
+    width: 180px;
+    height: 12px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.stats-subtitle {
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 700px;
+    margin: 0 auto 40px;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.stat-item h3 {
+    font-size: 2.8rem;
+    color: white;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.stat-item p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+}
+
+/* Interview Section Styles */
+.interview-section {
+    background: white;
+    padding: 80px 0;
+    position: relative;
+}
+
+.interview-section .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.interview-content {
+    max-width: 600px;
+}
+
+.interview-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #0B1B48;
+}
+
+.interview-section .subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    color: #666;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.question-card {
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.question-card:hover {
+    transform: translateY(-5px);
+}
+
+.question-card h2 {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+    color: #0B1B48;
+}
+
+.question-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.learn-more {
+    color: #4A90E2;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.view-all {
+    background: #4A90E2;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 20px;
+    transition: background 0.3s ease;
+    align-self: flex-start;
+}
+
+.view-all:hover {
+    background: #357ABD;
+}
+
+.interview-image {
+    position: relative;
+}
+
+.interview-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.interview-image::before {
+    content: '';
+    position: absolute;
+    right: -20px;
+    bottom: -20px;
+    width: 100px;
+    height: 100px;
+    background-image: url('images/iq-circle.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.interview-image::after {
+    content: '';
+    position: absolute;
+    right: 30%;
+    top: -20px;
+    width: 80px;
+    height: 80px;
+    background-image: url('images/iq-dot-bg.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .interview-section .container {
+        grid-template-columns: 1fr;
+    }
+
+    .interview-content {
+        max-width: 100%;
+    }
+
+    .interview-image {
+        order: -1;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .interview-section h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats-title {
+        font-size: 2rem;
+    }
+} 
