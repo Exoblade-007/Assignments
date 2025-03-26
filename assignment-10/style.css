@@ -6,9 +6,114 @@
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1440px; /* Set width to 1440px */
     margin: 0 auto;
     padding: 0 20px;
+}
+
+/* Menu Bar Styles */
+.menu-bar {
+    background-color: #ffffff; /* Change as needed */
+    display: flex;
+    align-items: center;
+    padding: 10px 200px; /* Updated padding */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Fixes the menu bar at the top */
+    top: 0; /* Positions it at the top */
+    left: 0;
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensures it stays above other content */
+}
+
+.logo {
+    height: 50px; /* Adjust height as needed */
+    margin-right: 20px;
+}
+
+.menu-items {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Pushes menu items to the right */
+}
+
+.menu {
+    position: relative; /* For dropdown positioning */
+}
+
+.menu a {
+    color: #333; /* Change as needed */
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 0.9rem; /* Smaller text */
+}
+
+.menu:hover .dropdown {
+    display: block; /* Show dropdown on hover */
+}
+
+.dropdown {
+    display: none; /* Hide dropdown by default */
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown a {
+    color: black;
+    padding: 10px 12px; /* Smaller padding */
+    text-decoration: none;
+    display: block;
+    font-size: 0.8rem; /* Smaller text */
+}
+
+.dropdown a:hover {
+    background-color: #f1f1f1;
+}
+
+.become-mentor {
+    background-color: white; /* White background */
+    color: black; /* Black text */
+    border: 1px solid #2193D2; /* Optional border */
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.become-mentor:hover {
+    background-color: #2193D2;
+    color: white;
+}
+
+.reach-us {
+    background-color: #2193D2; /* Change as needed */
+    color: white;
+    border: 1px solid transparent; /* Initially no border */
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.reach-us:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid #2193D2; /* Border on hover */
+}
+
+/* Adjust the top margin of the sections to avoid overlap with the fixed menu */
+.stats-section {
+    margin-top: 70px; /* Adjust based on the height of the menu bar */
+    background-color: #0B1B48;
+    background-image: url('images/spotlight-bg.webp');
+    background-position: right top;
+    background-repeat: no-repeat;
+    padding: 60px 0;
+    color: white;
+    position: relative;
+    overflow: hidden;
 }
 
 /* Stats Section Styles */
@@ -32,8 +137,6 @@
 }
 
 .stats-title::after {
-    content: '';
-    background-image: url('images/spotlight-heading-bg.svg');
     width: 180px;
     height: 12px;
     position: absolute;
@@ -42,6 +145,12 @@
     transform: translateX(-50%);
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.highlight {
+    background-image: url('images/spotlight-heading-bg.svg');
+    background-repeat: no-repeat;
+    background-position: bottom;
 }
 
 .stats-subtitle {
@@ -113,11 +222,6 @@
     border-radius: 10px;
     padding: 25px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.question-card:hover {
-    transform: translateY(-5px);
 }
 
 .question-card h2 {
@@ -191,41 +295,4 @@
     background-size: contain;
     background-repeat: no-repeat;
     z-index: -1;
-}
-
-/* Responsive Design */
-@media (max-width: 992px) {
-    .stats-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .interview-section .container {
-        grid-template-columns: 1fr;
-    }
-
-    .interview-content {
-        max-width: 100%;
-    }
-
-    .interview-image {
-        order: -1;
-        max-width: 600px;
-        margin: 0 auto;
-    }
-}
-
-@media (max-width: 768px) {
-    .interview-section h1 {
-        font-size: 2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .stats-container {
-        grid-template-columns: 1fr;
-    }
-    
-    .stats-title {
-        font-size: 2rem;
-    }
 } 
