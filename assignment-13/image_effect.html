@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover fade in and out</title>
+
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        section{
+            margin: auto;
+        }
+        .outer-box{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            padding-top: 100px;
+        }
+        .image-box{
+            position: relative;
+        }
+        .hover-text{
+            width: 400px;
+            text-align: center;
+            position: absolute;
+            top: 50px;
+            left: 0px;
+            color: white;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            z-index: 10;
+        }
+        .hover-text p{
+            padding: 25px;
+            font-size: large;
+            font-weight: bold;
+        }   
+        .hover-text h2{
+            font-size: 20px;
+        }
+        .overlay{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            z-index: 1;
+        }
+        .button button{
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            padding: 15px;
+            border: none;
+            background-color: white;
+            color: black;
+            text-transform: capitalize;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            transition: opacity 0.5s ease;
+            z-index: 10;
+            cursor: pointer;
+        }
+        .image-box:hover .hover-text{
+            opacity: 1;
+        }
+        .image-box:hover .overlay{
+            opacity: 1;
+        }
+        .image-box:hover .button button{
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    
+    <section>
+        <div class="outer-box">
+            <div class="image-box">
+                <img src="images/1.jpg" alt="">
+                <div class="overlay"></div>
+                <div class="hover-text">
+                    <h2>Heading</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic possimus explicabo, quaerat consequatur cumque et id quibusdam obcaecati! Inventore, neque.</p>
+                </div>
+                <div class="button">
+                    <button>Read More</button>
+                </div>
+            </div>
+            <div class="image-box">
+                <img src="images/2.jpg" alt="">
+                <div class="overlay"></div>
+                <div class="hover-text">
+                    <h2>Heading</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic possimus explicabo, quaerat consequatur cumque et id quibusdam obcaecati! Inventore, neque.</p>
+                </div>
+                <div class="button">
+                    <button>Read More</button>
+                </div>
+            </div>
+            <div class="image-box">
+                <img src="images/3.jpg" alt="">
+                <div class="overlay"></div>
+                <div class="hover-text">
+                    <h2>Heading</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic possimus explicabo, quaerat consequatur cumque et id quibusdam obcaecati! Inventore, neque.</p>
+                </div>
+                <div class="button">
+                    <button>Read More</button>
+                </div>
+            </div>
+            <div class="image-box">
+                <img src="images/4.jpg" alt="">
+                <div class="overlay"></div>
+                <div class="hover-text">
+                    <h2>Heading</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic possimus explicabo, quaerat consequatur cumque et id quibusdam obcaecati! Inventore, neque.</p>
+                </div>
+                <div class="button">
+                    <button>Read More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

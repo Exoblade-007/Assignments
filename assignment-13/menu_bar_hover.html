@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .logo img {
+            height: 60px;
+        }
+
+        .menu-bar {
+            width: 100%;
+            height: 80px;
+            box-shadow: 0px 2px 10px 5px #ccc;
+        }
+
+        .nav-options {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-size: 20px;
+            position: relative;
+        }
+
+        .menu-buttons {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 200px;
+        }
+
+        .hover-text {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: white;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            list-style: none;
+            min-width: 150px;
+            z-index: 10;
+        }
+
+        .dropdown li {
+            padding: 8px 15px;
+            white-space: nowrap;
+        }
+
+        .dropdown li:hover {
+            background-color: #f0f0f0;
+        }
+
+        .hover-text:hover .dropdown {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="menu-bar">
+            <div class="menu-buttons">
+                <div class="logo">
+                    <img src="images/wscube-tech-logo.svg" alt="">
+                </div>
+                <div class="nav-options">
+                    <div class="hover-text">
+                        <p>Home</p>
+                        <ul class="dropdown">
+                            <li>Submenu 1</li>
+                            <li>Submenu 2</li>
+                            <li>Submenu 3</li>
+                            <li>Submenu 4</li>
+                            <li>Submenu 5</li>
+                        </ul>
+                    </div>
+                    <div class="hover-text">
+                        <p>About</p>
+                        <ul class="dropdown">
+                            <li>Submenu 1</li>
+                            <li>Submenu 2</li>
+                            <li>Submenu 3</li>
+                            <li>Submenu 4</li>
+                            <li>Submenu 5</li>
+                        </ul>
+                    </div>
+                    <div class="hover-text">
+                        <p>Course</p>
+                        <ul class="dropdown">
+                            <li>Submenu 1</li>
+                            <li>Submenu 2</li>
+                            <li>Submenu 3</li>
+                            <li>Submenu 4</li>
+                            <li>Submenu 5</li>
+                        </ul>
+                    </div>
+                    <div class="hover-text">
+                        <p>Gallery</p>
+                        <ul class="dropdown">
+                            <li>Submenu 1</li>
+                            <li>Submenu 2</li>
+                            <li>Submenu 3</li>
+                            <li>Submenu 4</li>
+                            <li>Submenu 5</li>
+                        </ul>
+                    </div>
+                    <div class="hover-text">
+                        <p>Contact Us</p>
+                        <ul class="dropdown">
+                            <li>Submenu 1</li>
+                            <li>Submenu 2</li>
+                            <li>Submenu 3</li>
+                            <li>Submenu 4</li>
+                            <li>Submenu 5</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+</body>
+</html>
